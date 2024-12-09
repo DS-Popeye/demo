@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Ananda+Black&display=swap");
+
+.poppins-font {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-color: #444;
+  --heading-color: #000;
+  --primary-color: #448c74;
+  --lighter-color: #444;
+  --subtitle-color: #444;
+  --black-color: #000;
+  --border-color: rgba(119, 119, 125, 0.2);
+  --button-border: rgba(119, 119, 125, 0.2);
+  --body-background: #ecf3f1;
+  --grey-bg: #e6eaee;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+body {
+  font-weight: 300;
+  line-height: 30px;
+  font-size: 16px;
+  color: var(--main-color);
+}
+
+/* Loader styles */
+#loading-screen {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Arial", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Blinking text animation */
+.loader-text {
+  animation: blink 1s infinite;
+}
+
+/* Blink animation */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Hide main content initially */
+#main-content {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Prevent scrolling when loading screen is visible */
+body.loading {
+  overflow: hidden;
+}
+
+p {
+  line-height: 28px;
+  margin-bottom: 1rem;
+}
+
+.signature {
+  font-family: "Ananda Black", cursive;
+}
+
+.about-content-part h2 {
+  margin-bottom: 20px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-align: initial;
+}
+
+.about-content-part h2 span {
+  -webkit-text-stroke: 1px #000;
+}
+
+.adress-field ul li {
+  color: var(--main-color);
+}
+
+.theme-btn {
+  background: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid var(--button-border);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  overflow: visible;
+  border-radius: 15px;
+  padding: 12px 24px;
+  text-align: center;
+  justify-content: center;
+  text-transform: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* Scroller Start */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  position: relative; /* Ensure proper scrolling context */
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  animation: scroll var(--_animation-duration, 100s) linear infinite; /* Scroll animation */
+}
+
+.scroller[data-direction="left"] .scroller__inner {
+  animation-direction: normal; /* Scroll left to right */
+}
+
+.scroller[data-direction="right"] .scroller__inner {
+  animation-direction: reverse; /* Scroll right to left */
+}
+
+.scroller__inner h4 {
+  white-space: nowrap; /* Prevent text wrapping */
+  margin: 0;
+}
+
+/* Scroller END */
+
+.image-container {
+  position: relative;
+  width: 200px; /* Adjust to your desired size */
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px dashed var(--primary-color); /* Dashed border */
+  animation: rotate 20s linear infinite; /* Rotate animation */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.row {
+  --bs-gutter-x: 30px;
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
+}
+
+.single-resume {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  box-shadow: rgba(255, 255, 255, 0.025) 0px 0.362176px 0.651917px -1px inset,
+    rgba(255, 255, 255, 0.036) 0px 3px 5.4px -2px inset;
+  background-color: #fff;
+}
+
+.experience-list {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.resume-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid rgba(119, 119, 125, 0.2);
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.resume-item .icon {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #f9f9f9;
+  line-height: 50px;
+  border-radius: 12px;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 20px;
+}
+
+.resume-item .content .years {
+  line-height: 1;
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: var(--main-color);
+}
+
+.resume-item .content h4 {
+  margin: 8px 0px;
+  color: var(--subtitle-color);
+  font-size: 20px;
+}
+
+.resume-item .content .company {
+  font-weight: 400;
+  color: var(--main-color);
+  font-size: 16px;
+}
+
+.story-e {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  color: white;
+  font-weight: 400;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.map-word {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  -webkit-text-stroke: 1px #000;
+  color: transparent;
+}

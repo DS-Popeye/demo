@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hector De Castro || Stories</title>
+    <link rel="shortcut icon" href="./assets/images/Favicon.png" type="image/x-icon">
+
+    <!--tailwind css cdn-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- CSS style file -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!--font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- Swiper Styles -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body class="bg-[#ECF3F1] poppins-font lg:pt-28 pt-24 px-2 my-auto">
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 bg-black flex items-center justify-center z-50">
+        <h1 class="loader-text">Hector De Castro</h1>
+    </div>
+
+    <!--header section start-->
+    <section id="main-content" class="mx-auto max-w-screen-xl bg-[#ECF3F1] fixed top-0 left-0 right-0 z-50">
+        <header id="main-header"
+            class="text-black flex max-w-screen-xl flex-col py-8 pl-2 lg:pl-0 lg:mx-auto lg:flex-row lg:items-center transition-all duration-300">
+            <a href="./" class="flex items-center whitespace-nowrap lg:text-4xl md:text-2xl text-xl font-semibold">
+                Hector
+            </a>
+            <input type="checkbox" class="peer hidden" id="navbar-open" achecked />
+            <label id="toggle" class="absolute top-8 right-5 cursor-pointer lg:hidden" for="navbar-open">
+                <span class="sr-only">Toggle Navigation</span>
+                <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </label>
+            <nav aria-label="Header Navigation"
+                class="peer-checked:pt-8 peer-checked:max-h-[248px] flex max-h-0 w-full flex-col items-center overflow-hidden transition-all lg:ml-24 lg:max-h-full lg:flex-row">
+                <ul class="flex w-full flex-col items-center space-y-2 lg:flex-row lg:justify-center lg:space-y-0">
+                    <li class="lg:mr-6">
+                        <a class="text-base text-gray-900 hover:text-[#448C74] transition duration-500"
+                            href="./#about">About</a>
+                    </li>
+                    <li class="lg:mr-6">
+                        <a class="text-base text-gray-900 hover:text-[#448C74] transition duration-500"
+                            href="./#service">Services</a>
+                    </li>
+                    <li class="lg:mr-6">
+                        <a class="text-base text-gray-900 hover:text-[#448C74] transition duration-500"
+                            href="./#works">Works</a>
+                    </li>
+                    <li class="lg:mr-6">
+                        <a class="text-base text-gray-900 hover:text-[#448C74] transition duration-500"
+                            href="./#price">Pricing</a>
+                    </li>
+                    <li class="lg:mr-6">
+                        <a class="text-base text-gray-900 hover:text-[#448C74] transition duration-500"
+                            href="./#Story">Blog</a>
+                    </li>
+                    <li class="lg:mr-6">
+                        <a class="text-base text-gray-900 hover:text-[#448C74] transition duration-500"
+                            href="./#contact">Contact</a>
+                    </li>
+                    <li class="lg:mr-6 lg:hidden">
+                        <a class="text-base text-gray-900 hover:text-[#448C74] transition duration-500"
+                            href="https://www.linkedin.com/in/hectordecastro/">Hire Me</a>
+                    </li>
+                </ul>
+                <hr class="mt-4 w-full lg:hidden" />
+                <div class="my-4 flex items-center space-x-6 space-y-2 lg:my-0 lg:ml-auto lg:space-x-8 lg:space-y-0">
+                    <a href="https://www.linkedin.com/in/hectordecastro/" title=""
+                        class="whitespace-nowrap rounded-xl border border-black hover:bg-[#448C74] px-6 py-3 font-medium text-sm text-gray-900 hover:text-white hover:border-none transition-all duration-500">Hire
+                        Me <i class="fa-regular fa-handshake"></i>
+                    </a>
+                </div>
+            </nav>
+        </header>
+    </section>
+    <!--Header section end-->
+
+    <!-- Story Section Start-->
+    <section id="Story" class="mb-20 container mx-auto max-w-screen-xl rounded-[20px]">
+        <div class="text-center  p-10">
+            <p class="font-light text-base mb-4">Latest News</p>
+            <h2 class="text-5xl mb-4">Stories</h2>
+        </div>
+        <div id="story-section-container"></div>
+    </section>
+    <!-- Story Section End-->
+
+
+
+    <!-- Footer section Start -->
+    <section id="Kickstart" class="container mx-auto max-w-screen-xl mb-10">
+        <div class="flex flex-wrap justify-between">
+            <p class="pb-4">&copy; Copyright @2024, <a class="text-[var(--primary-color)]" href="./">Quantum Coders</a>
+                All
+                Rights
+                Reserved.</p>
+            <p class="pb-4">Crafted with ❤️ Quantum Coders</p>
+        </div>
+    </section>
+    <!-- Footer section End -->
+
+
+    <!-- Link to the JavaScript file -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- Swiper Script -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        const data = [
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4D12AQFkfGXiDKrS7g/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1722730835444?e=1739404800&v=beta&t=BINKHXCrbzaD-Ki8wvx3RpFd32hUUCuKUrAY-U49RLM",
+                heading: "Regenerative Tourism seeks active collaboration with indigenous communities to boost positive change",
+                articleLink: "https://www.linkedin.com/pulse/regenerative-tourism-seeks-active-collaboration-boost-de-castro-1gn1f"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4D12AQEeSEqy-g_hFQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1723834050043?e=1739404800&v=beta&t=OxmAbgjCcUWCRqiFODreNHugPHj-89XjYPzSdLfqCkQ",
+                heading: "10 top destinations to enjoy regenerative luxury tourism: good practices and insights",
+                articleLink: "https://www.linkedin.com/pulse/top-10-destinations-regenerative-luxury-tourism-hector-de-castro-88f2f"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4D12AQHiB_G6YJ-g1w/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1726984528056?e=1739404800&v=beta&t=ffKqHxvs5-9OcS4iPCKouKz7it5-AZP8WrVIfKC1TW0",
+                heading: "Why REGENERA LUXURY Certification is the future for luxury hotels & retreats",
+                articleLink: "https://www.linkedin.com/pulse/why-regenera-luxury-certification-future-boutique-hotels-de-castro-53f2f"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4D12AQEL5gzup0hRqA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1728514266752?e=1739404800&v=beta&t=i9Ki2rgpcgfZ5hp8h_1F4-Z1P2VHnI3t43S2YyPANfU",
+                heading: "Comparative analysis between Green Globe and Regenera Luxury certifications",
+                articleLink: "https://www.linkedin.com/pulse/comparative-analysis-between-green-globe-regenera-luxury-de-castro-dpnyf"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4D12AQH01inqdvc9kw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1731632690693?e=1739404800&v=beta&t=Dwu14ZLb6bt1dUwXBWPCGOdpDFmlXsBhZn28IjJGsKs",
+                heading: "My Roots in Nature and the Call for Regeneration in Hospitality",
+                articleLink: "https://www.linkedin.com/pulse/my-roots-nature-call-regeneration-hospitality-hector-de-castro-iop9f"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4D12AQHKAHg-La5Hng/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1731886638083?e=1739404800&v=beta&t=S3LIuJQWDt7QdAoL9VT2Nu87KN4TJQx_SBw2o2y2jdM",
+                heading: "Finding the Link Between Wellness and Regeneration for Your Luxury Hotel",
+                articleLink: "https://www.linkedin.com/pulse/finding-link-between-wellness-regeneration-your-luxury-de-castro-awref"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4D12AQF3xqimJbeubg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1732574166936?e=1739404800&v=beta&t=dr9NsO7DVqxz5OT1PjOEzyDKYC9ON577LCG_mycoV2M",
+                heading: "COP29 in Baku: Historic Milestones Amid Tensions and Unfinished Business",
+                articleLink: "https://www.linkedin.com/pulse/cop29-baku-historic-milestones-amid-tensions-business-de-castro-jyscf"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4D12AQELZc1kxYjDtw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1688168578951?e=1739404800&v=beta&t=FjEBrLr8vQMIkbWYggP_YKgcLAn4LH3rD3AQKrdZPKw",
+                heading: "What is Blue Tourism and What are its Benefits for the Tourist and the Hotel Industry?",
+                articleLink: "https://www.linkedin.com/pulse/what-blue-tourism-its-benefits-tourist-hotel-industry-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4E12AQE8GkyDT8foWA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1700325814425?e=1739404800&v=beta&t=lOJNlYCJOehZuDDJmonKAQPVH2hJBatxBoYi7P_s-4A",
+                heading: "The ripple effect of regenerative tourism: a sustainable wave of change",
+                articleLink: "https://www.linkedin.com/pulse/ripple-effect-regenerative-tourism-sustainable-wave-change-de-castro-mkwoe"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4D12AQHGtqMRhf5HFg/article-cover_image-shrink_423_752/article-cover_image-shrink_423_752/0/1718872079672?e=1739404800&v=beta&t=ZmVeOxpkCMgNG-RuAkNIk_PpLkv1590w1_KY3fM2n6Q",
+                heading: "Advancing Regenerative Tourism in Small Island Developing States (SIDS)",
+                articleLink: "https://www.linkedin.com/feed/update/urn:li:activity:7209479288281047042?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7209479288281047042%29"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4D12AQHGRza8pOReHA/article-cover_image-shrink_423_752/article-cover_image-shrink_423_752/0/1708048730643?e=1739404800&v=beta&t=WG45Rr8KdUT3rkZdAErU7H4z9ZeLK0DLw-KxXMRmJ7o",
+                heading: "Recognizing Equality Champions in Tourism: Equality in Tourism Awards with LUSH association",
+                articleLink: "https://www.linkedin.com/feed/update/urn:li:activity:7164077838432649216?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7164077838432649216%29"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4D12AQEe2MiR19h0IA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1708400226977?e=1739404800&v=beta&t=isExjQDJvuD2sqW9hFL4H7b5tpmq6zytKLzk9jmUdx4",
+                heading: "Welcome to new REGENERA LUXURY member: La Esperanza, eco luxury boutique hotel in Granada, Spain",
+                articleLink: "https://www.linkedin.com/feed/update/urn:li:activity:7165601046101180416?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7165601046101180416%29"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4E12AQE8Okca2SIFPA/article-cover_image-shrink_423_752/article-cover_image-shrink_423_752/0/1670583215070?e=1739404800&v=beta&t=qhaQOmoUPzMrzP7lNbrAxU4-gp83QoWY_KfLXyYM44s",
+                heading: "What is luxury mindfulness? What is luxury mindfulness?",
+                articleLink: "https://www.linkedin.com/pulse/what-luxury-minfulness-hector-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4D12AQFH0ysUJAearQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1724552509042?e=1739404800&v=beta&t=DiS2vCY8P7CI61YksxIj5Zmx-i-FoRo3Z6R-3VEn8bE",
+                heading: "REGENERA LUXURY announces landmark agreement with Mr. Ivan Eskildsen, Minister of Tourism of Panama (2019-2023)",
+                articleLink: "https://www.linkedin.com/pulse/lush-announces-landmark-agreement-mr-ivan-eskildsen-panama-de-castro-fzade"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4E12AQE_hgpH8NGpMA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1667818616101?e=1739404800&v=beta&t=FDaN2vg00BG83aS8AadBuREzui2fN4mQ6zpwvA6R_4E",
+                heading: "To preserve or enhance? An analysis of Regenerative vs Sustainable Tourism",
+                articleLink: "https://www.linkedin.com/pulse/preserven-enhance-analysis-regenerative-vs-tourism-hector-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4D12AQF4yt7vd5hsAA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1683200920112?e=1739404800&v=beta&t=zzFQ-rNa5HlpkcrHQWsWheVxhrC7kX1stSn3efwdGis",
+                heading: "Solace in Slowness: is Slow Tourism the next big trend?",
+                articleLink: "https://www.linkedin.com/pulse/solace-slowness-slow-tourism-next-big-trend-hector-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4D12AQGsZPpDJ_o4iA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1685315836679?e=1739404800&v=beta&t=yE6susYeE08dyZlCppTvZkByC6kSJTUCwS2JBf_8r2g",
+                heading: "Ensuring Quality in Hotels: Stakeholders and Measurement",
+                articleLink: "https://www.linkedin.com/pulse/ensuring-quality-hotels-stakeholders-measurement-hector-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/D4E2DAQEblXrHycOpTw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1667673763993?e=1734256800&v=beta&t=xGl1PCTQCmcGlrheyDl10eZOadOSH4bCUHkxywgxV88",
+                heading: "DE CASTRO GROUP | Digital marketing internship - careers",
+                articleLink: "https://www.linkedin.com/in/hectordecastro/details/featured/1635507437098/single-media-viewer?type=IMAGE&profileId=ACoAAAZI2yoBdEJ9biROQoMHqs35n72RANPu5wM"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C4E2DAQEpIsSO1EVGYg/profile-treasury-image-shrink_1920_1920/profile-treasury-image-shrink_1920_1920/0/1656906891513?e=1734256800&v=beta&t=nB1adj8-gwTWi02QoZ8-k7NhBQ5_uxrsNJi5JeGNA2k",
+                heading: "Become a published writer at the Luxury Sustainable Hotels Int'l Association",
+                articleLink: "https://www.linkedin.com/in/hectordecastro/details/featured/1635495547027/single-media-viewer?type=IMAGE&profileId=ACoAAAZI2yoBdEJ9biROQoMHqs35n72RANPu5wM"
+            },
+            {
+                imageSrc: "https://lushia.org/content/LUSH-500.165-blacked.png",
+                heading: "Seville will host in Dec'22 world congress in sustainable tourism criteria",
+                articleLink: "https://www.lushia.org/post/seville-will-host-in-dec-22-the-world-congress-that-sets-the-sustainable-tourism-criteria"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C4D12AQE0YLLllhn2Cg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1640852333702?e=1739404800&v=beta&t=k4BOobx75IF5lug0h1emcHPmd8k-uH70EYcghSNLHjM",
+                heading: "The Challenge and Beauty of Building Sustainable Hotels | by Hector De Castro",
+                articleLink: "https://www.linkedin.com/pulse/challenge-beauty-building-sustainable-hotels-hector-de-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C4E12AQGs6cqD9Ae_7A/article-cover_image-shrink_423_752/article-cover_image-shrink_423_752/0/1637652704355?e=1739404800&v=beta&t=XsSBGBklJZ3mcZ2Xib2oNOgA-EZPaPiT3pZNdvcA2vs",
+                heading: "Hotel owners have ‘no excuses’ not to be sustainable | by Hector De Castro",
+                articleLink: "https://www.linkedin.com/feed/update/urn:li:activity:6894363510852128768?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A6894363510852128768%29"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C4D12AQFYa2QHoPxATA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1645271134492?e=1739404800&v=beta&t=UZvWIZgcBl1Zqu6wALqobaon2rl0gs5tdxClNbHfN_w",
+                heading: "The founder´s dilemma or my advice to entrepreneurs - by Hector De Castro",
+                articleLink: "https://www.linkedin.com/pulse/founders-dilemma-my-advice-entrepreneurs-hector-de-castro-hector"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C4D12AQEkDYE7WYNMDw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1643395753090?e=1739404800&v=beta&t=tNKcixaBXVJKCRV3GEUjCUF2BmIU8SQCyOBUdeAJsRk",
+                heading: "2022-2026 caribbean sustainable development | by Hector De Castro",
+                articleLink: "https://www.linkedin.com/pulse/2022-2026-caribbean-sustainable-development-hector-de-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C4D12AQH-HVf8Qd4-AA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1644953764112?e=1739404800&v=beta&t=V-jJG6ZEjcP-N-JiefJGJK2X8b2wSq1Cx83sh9doigw",
+                heading: "Is Metaverse the same than virtual reality? - by Hector De Castro",
+                articleLink: "https://www.linkedin.com/pulse/metaverse-same-than-virtual-reality-hector-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C4D12AQHEv884VNBmAg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1537022337916?e=1739404800&v=beta&t=7AeuNM8JDXzrgToEaapwbNBB3DPjYLRwGIE2tJ0fM-8",
+                heading: "US and Caribbean Hotel Market 2018-2021. Growth Analysis by Country, and Status",
+                articleLink: "https://www.linkedin.com/pulse/us-caribbean-hotel-market-2018-2021-growth-analysis-type-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C5612AQGX069FhrqeHQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1539995786701?e=1739404800&v=beta&t=2OI4jXJ3bhtWhUSK_8e75-vkxo7Jg9g0FdKBCxAhigA",
+                heading: "The 7 secret weapons to differentiate from the competition - by Hector De Castro",
+                articleLink: "https://www.linkedin.com/pulse/how-can-i-differentiate-from-competition-hector-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C4E12AQEOiZed76HDoA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1633284957517?e=1739404800&v=beta&t=Uk_LGIyLC2CBnKDIl6lOx0UpsQeXK8eAe01Tr5syDv4",
+                heading: "10 secrets for networking success - by Hector De Castro",
+                articleLink: "https://www.linkedin.com/pulse/my-secrets-networking-success-hector-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C5612AQGIkpn_Bq3oxQ/article-inline_image-shrink_400_744/article-inline_image-shrink_400_744/0/1575822745451?e=1739404800&v=beta&t=rECKJ9mp6zBZCoEv2By5oxr6FClz3_GJQYt3T0lFZTM",
+                heading: "Salario emocional como pilar de sostenibilidad de la empresa",
+                articleLink: "https://www.linkedin.com/pulse/salario-emocional-como-pilar-de-sostenibilidad-la-hector-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C4E12AQGYcl7s03xHZg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1616536417053?e=1739404800&v=beta&t=s4TtLn4Mn9Dy4sCh6BqRoqm_1ZTE11FfAIWLpXnBd4A",
+                heading: "Científicos de Stanford desarrollan una herramienta que mide las emisiones de las centrales eléctricas en tiempo real",
+                articleLink: "https://www.linkedin.com/pulse/cient%C3%ADficos-de-stanford-desarrollan-una-herramienta-que-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C5612AQFmi-rh3Cqd4Q/article-cover_image-shrink_423_752/article-cover_image-shrink_423_752/0/1576088432787?e=1739404800&v=beta&t=QTinL9qPBl2kf4prK0MMAsqq2UsYkNB07l_swAsvPXI",
+                heading: "EXENER GROUP y Universidad de Jaen",
+                articleLink: "https://www.linkedin.com/pulse/exener-group-y-universidad-de-jaen-hector-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C4E12AQFI9Z2ZJgiQjA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1616538010192?e=1739404800&v=beta&t=GwHmovYrg3JFa-ZXRn6puUwwp8FgVBWGOL-3kvWuuc4",
+                heading: "Emprendedor o pasión kamikaze",
+                articleLink: "https://www.linkedin.com/pulse/yo-con-tener-trabajo-o-c%C3%B3mo-morir-en-el-intento-hector-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C5612AQHwY1dc-3_YoA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1531075283478?e=1739404800&v=beta&t=gEnHn40zbJcvSW_GW_T2hCX8ygSKOzb8xriT1uopVa4",
+                heading: "The 5 Sectors of Hospitality Industry",
+                articleLink: "https://www.linkedin.com/pulse/different-sectors-hospitality-industry-hector-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C5612AQHfhOuH0vTWyA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1530994765220?e=1739404800&v=beta&t=P6tHwtN4zm189Rh6wSXIGhHZN2E9xplLVWEKaDhNV7c",
+                heading: "UNWTO partners with IE Business School to promote innovation and entrepreneurship in the tourism sector",
+                articleLink: "https://www.linkedin.com/pulse/unwto-partners-ie-business-school-promote-innovation-sector-hector"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C5612AQHPUFbjqvo0rw/article-cover_image-shrink_423_752/article-cover_image-shrink_423_752/0/1531382125843?e=1739404800&v=beta&t=-zkdY-uZVRxqqn-b9jRSGO2z8ebHLnbNBdp8kUet-Hc",
+                heading: "12+1 Key Points for a Successful Hotel Procurement & Contract Negotiation",
+                articleLink: "https://www.linkedin.com/pulse/hotel-contract-procurement-negotiation-tips-hector-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C4D12AQFDUpBg_dMSKw/article-cover_image-shrink_423_752/article-cover_image-shrink_423_752/0/1533589922464?e=1739404800&v=beta&t=_RnUho4Od0UV6bQAmLG35o-brmd0fteBXIVMG6wvBvQ",
+                heading: "What are the new 3p (5p, 6p, and 7p) of marketing, and Why?",
+                articleLink: "https://www.linkedin.com/pulse/what-new-3p-5p-6p-7p-marketing-hector-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C4E12AQHYj-KRIJamdQ/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1534404785602?e=1738800000&v=beta&t=yRkmbfgB4wxQ8TtKe1iWAPZucipkRkd9vDLTZDJPxY0",
+                heading: "What should you consider before 'Going Global'? | International development and points of risk",
+                articleLink: "https://www.linkedin.com/pulse/10-recommendations-before-going-global-hector-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C4E12AQHr6XhObaOXlQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1616538723430?e=1739404800&v=beta&t=4wPI9_PKq9oyZqlbw2LKSqIswVROpDmU8w5cLMS6_7c",
+                heading: "Beyond Green, an outstanding luxury ecotourism experience",
+                articleLink: "https://www.linkedin.com/pulse/beyond-green-outstanding-luxury-ecotourism-experience-de-castro"
+            },
+            {
+                imageSrc: "https://media.licdn.com/dms/image/v2/C4D12AQEkDYE7WYNMDw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1643395753090?e=1739404800&v=beta&t=tNKcixaBXVJKCRV3GEUjCUF2BmIU8SQCyOBUdeAJsRk",
+                heading: "2022-2026 Caribbean sustainable development",
+                articleLink: "https://www.linkedin.com/feed/update/urn:li:activity:6892904747482112002?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A6892904747482112002%29"
+            }
+        ];
+
+
+        const container = document.getElementById("story-section-container");
+
+        data.forEach(item => {
+            const storyHTML = `
+            <div class="flex bg-[#fff] px-5 py-10 gap-4 justify-around flex-col lg:flex-row mb-7">
+                <div class="w-full lg:w-1/2">
+                    <div class="group relative overflow-hidden rounded-xl">
+                        <img class="max-w-full inline-block transition-transform duration-500 group-hover:scale-105 group-hover:blur-[1px]"
+                            src="${item.imageSrc}" alt="Blog Image" />
+                        <div class="story-e">
+                            <a class="text-xs font-[#fff]" href="#">Design</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 pl-0 lg:pl-16 grid place-items-center">
+                    <div class="block">
+                        <h2>
+                            <a class="font-semibold text-2xl text-black py-[10px]" href="${item.articleLink}">
+                                ${item.heading}
+                            </a>
+                        </h2>
+                        <div class="inline-block pt-2">
+                            <a href="${item.articleLink}" 
+                                class="poppins-font bg-[#448C74] text-[#FFFFFF] py-3 px-6 text-sm font-medium rounded-s-xl rounded-e-xl hover:bg-[#000000] duration-300 transition-all flex flex-row justify-center">
+                                See More
+                                <svg class="w-5 h-5 pl-1 justify-self-center" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+            container.innerHTML += storyHTML;
+        });
+
+    </script>
+
+</body>
+
+</html>
