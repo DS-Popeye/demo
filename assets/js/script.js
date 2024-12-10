@@ -108,6 +108,37 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// client
+document.addEventListener('DOMContentLoaded', () => {
+  const swiper = new Swiper('.slider', {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.slider-button-next',
+      prevEl: '.slider-button-prev',
+    },
+    spaceBetween: 20,
+    slidesPerView: 2,
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 40,
+      },
+    },
+  });
+});
+
 
 // Map
 // const toggleButton = document.getElementById('toggle-button');
